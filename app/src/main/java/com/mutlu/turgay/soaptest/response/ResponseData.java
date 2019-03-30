@@ -9,14 +9,14 @@ import org.simpleframework.xml.Root;
 @Namespace(reference = "http://tempuri.org/")
 public class ResponseData {
 
-    @Element(name = "AddResult")
-    Integer addResult;
+    @Element(name = "AddResult", required = false)
+    int addResult;
 
-    public Integer getAddResult() {
+    public int getAddResult() {
         return addResult;
     }
 
-    public void setAddResult(Integer addResult) {
+    public void setAddResult(int addResult) {
         this.addResult = addResult;
     }
 }

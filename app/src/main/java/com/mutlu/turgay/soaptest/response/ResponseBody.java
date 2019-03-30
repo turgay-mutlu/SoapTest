@@ -3,10 +3,10 @@ package com.mutlu.turgay.soaptest.response;
 import org.simpleframework.xml.Element;
 import org.simpleframework.xml.Root;
 
-@Root(name = "soap12:Body", strict = false)
+@Root(name = "soap:Body", strict = false)
 public class ResponseBody {
 
-    @Element(name = "AddResponse",required = false)
+    @Element(name = "AddResponse", required = false)
     private ResponseData addResponse;
 
     public ResponseData getAddResponse() {

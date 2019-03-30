@@ -10,6 +10,9 @@ import com.mutlu.turgay.soaptest.request.RequestData;
 import com.mutlu.turgay.soaptest.request.RequestEnvelope;
 import com.mutlu.turgay.soaptest.response.ResponseEnvelope;
 
+import java.io.IOException;
+
+import okhttp3.ResponseBody;
 import retrofit2.Call;
 import retrofit2.Callback;
 import retrofit2.Response;
@@ -36,12 +39,12 @@ public class MainActivity extends AppCompatActivity {
         Network.getInstance().getService().add(requestEnvelope).enqueue(new Callback<ResponseEnvelope>() {
             @Override
             public void onResponse(Call<ResponseEnvelope> call, Response<ResponseEnvelope> response) {
-                Log.e(TAG, "onResponse: "  + response.body().getBody().getAddResponse().getAddResult());
+                Log.e(TAG, "onResponse: " + response.body().getBody().getAddResponse().getAddResult() );
             }
 
             @Override
             public void onFailure(Call<ResponseEnvelope> call, Throwable t) {
-                Log.e(TAG, "onFailure: " );
+
             }
         });
     }

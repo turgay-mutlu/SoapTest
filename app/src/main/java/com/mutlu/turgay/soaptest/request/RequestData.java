@@ -9,9 +9,9 @@ import org.simpleframework.xml.Root;
 @Root(name = "Add", strict = false)
 @Namespace(reference = "http://tempuri.org/")
 public class RequestData {
-    @Element(name = "intA")
+    @Element(name = "intA", required = false)
     int intA;
-    @Element(name = "intB")
+    @Element(name = "intB", required = false)
     int intB;
 
     public int getIntA() {
